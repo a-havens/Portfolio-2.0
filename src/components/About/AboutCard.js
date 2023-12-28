@@ -7,27 +7,31 @@ function AboutCard() {
     <Card className="quote-card-view">
       <Card.Body>
         <blockquote className="blockquote mb-0">
-          <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className= "blue">Amanda Havens </span>
-            from <span className= "blue"> Independence, KY.</span>
+          <p style={{ textAlign: "left" }}>
+            Hey there folks, I'm <span className= "blue">Amanda Havens</span>
+            , hailing from <span className= "blue"> Independence, KY.</span>
             <br />
-            I am currently enrolled in a software engineer bootcamp provided by Thinkful.
             <br />
-            I have completed my fundementals, frontend, and backend sections, and currently
-            working on data algorithms. My expected completion date is February 6th, 2024.
+            Right now, I'm knee-deep in a software engineering bootcamp through Thinkful. 
+            I've knocked out the fundamentals, dabbled in frontend and backend work, and currently, 
+            I'm diving headfirst into data algorithms. 
+            Mark your calendars because I'm set to wrap this up by February 2024!
             <br />
             <br />
             Apart from coding, some other activities that I love to do!
           </p>
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Playing Games.
+              <ImPointRight /> Playing video/board games.
             </li>
             <li className="about-activity">
               <ImPointRight /> Reading sci/fi fantasy novels.
             </li>
             <li className="about-activity">
-              <ImPointRight /> Cooking.
+              <ImPointRight /> Cooking for my friends and family.
+            </li>
+            <li className="about-activity">
+              <ImPointRight /> taking care of all my adorable pets!
             </li>
           </ul>
 

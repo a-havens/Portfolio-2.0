@@ -17,20 +17,22 @@ function Home2() {
               LET ME <span className= "blue"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              After many years of career jumping, I finally found a path that really inspires me!
-              <br />
-              <br />I am well versed in classics like
-              <i>
-                <b className> Javascript, HTML, and CSS. </b>
-              </i>
+              Hey there! My journey through different career paths has been quite a ride! 
+              I started out in the culinary world, picking up skills that I still carry with me today. 
+              But, I soon realized that it wasn't my true calling.
               <br />
               <br />
-              My field of interest currently is &nbsp;
-              <i>
-                <b className= "blue">expanding my foundational knowledge in
-                  React.  
-                </b>
-              </i>
+              So, I switched gears and ventured into the world of banking. Spent about six years there, 
+              moving from a support role to crunching numbers as a data analyst. 
+              I found a real passion for diving into data and turning it into compelling presentations. 
+              But eventually, I felt like I hit a ceiling and that's when my interest in coding took off.
+              <br />
+              <br />
+              I was lucky enough to join a coding bootcamp, and that's when I finally discovered my true passion!
+              <br />
+              <br />
+              Now, I'm proficient in fundamental languages like <i><b className="blue">Javascript, HTML, and CSS</b></i>. 
+              I'm currently focused on diving deeper into <i><b className="blue">React</b></i> to expand my skills further in this field.
               <br />
               <br />
             </p>
