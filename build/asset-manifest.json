@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4173ec3e.css",
+    "main.js": "/static/js/main.17f7e171.js",
+    "static/js/496.594d6faa.chunk.js": "/static/js/496.594d6faa.chunk.js",
+    "static/media/about.png": "/static/media/about.beb8763f413c80cd753b.png",
+    "static/media/home-bg.jpg": "/static/media/home-bg.463a35908b8d558ff952.jpg",
+    "static/media/logo.png": "/static/media/logo.f17d43305f6eb99a40cc.png",
+    "static/media/homeMain.png": "/static/media/homeMain.76919ca9ce90624b42d5.png",
+    "static/media/decoderRing.png": "/static/media/decoderRing.c62225780947c2fa9e43.png",
+    "static/media/recipetracker.png": "/static/media/recipetracker.d31421a38f0bdb42d295.png",
+    "static/media/amanda-havens-resume.pdf": "/static/media/amanda-havens-resume.ad9f2cff170892e4973e.pdf",
+    "static/media/flashcard-app.png": "/static/media/flashcard-app.e080364e4f99b313550b.png",
+    "static/media/avatar.svg": "/static/media/avatar.06818603f79d1ca6840d44426e7d2b34.svg",
+    "static/media/pre.svg": "/static/media/pre.d4812f51c8c80976eaab.svg",
+    "index.html": "/index.html",
+    "main.4173ec3e.css.map": "/static/css/main.4173ec3e.css.map",
+    "main.17f7e171.js.map": "/static/js/main.17f7e171.js.map",
+    "496.594d6faa.chunk.js.map": "/static/js/496.594d6faa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4173ec3e.css",
+    "static/js/main.17f7e171.js"
+  ]
+}
