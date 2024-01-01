@@ -8,7 +8,6 @@ import {
   DiGit,
 } from "react-icons/di";
 import {
-  SiNextdotjs,
   SiPostgresql,
 } from "react-icons/si";
 
@@ -26,9 +25,6 @@ function Techstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiMongodb />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiNextdotjs />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiGit />

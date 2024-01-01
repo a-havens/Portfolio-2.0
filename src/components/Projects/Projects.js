@@ -18,6 +18,19 @@ function Projects() {
           <p style={{ color: "white" }}>
             Here are a few projects I've worked on recently.
           </p>
+
+          <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+            <Col md={4} className="project-card">
+              <ProjectCard
+                imgPath= {moviesImage}
+                isBlog={false}
+                title="WeLoveMovies"
+                description="Application that will show movies playing in theaters, and provides synopsis, runtime, and reviews."
+                ghLink="https://github.com/a-havens/WeLoveMovies_backend"
+                demoLink="https://welovemovies-frontend-mcnr.onrender.com/"
+              />
+            </Col>
+          </Row>
           <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
             <Col md={4} className="project-card">
               <ProjectCard
@@ -53,19 +66,6 @@ function Projects() {
               />
             </Col>
           </Row>
-          <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-            <Col md={4} className="project-card">
-              <ProjectCard
-                imgPath= {moviesImage}
-                isBlog={false}
-                title="WeLoveMovies"
-                description="Application that will show movies playing in theaters, and provides synopsis, runtime, and reviews."
-                ghLink="https://github.com/a-havens/WeLoveMovies_backend"
-                demoLink="https://welovemovies-frontend-mcnr.onrender.com/"
-              />
-            </Col>
-          </Row>
-
         </Container>
       </Container>
     );
