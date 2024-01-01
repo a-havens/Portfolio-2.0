@@ -5,6 +5,7 @@ import Particle from "../Particle";
 import recipeTrackerImage from "../../Assets/Projects/recipetracker.png";
 import flashcardAppImage from "../../Assets/Projects/flashcard-app.png";
 import decoderImage from "../../Assets/Projects/decoderRing.png";
+import moviesImage from "../../Assets/Projects/welovemovies.png";
 
 function Projects() {
     return (
@@ -49,6 +50,18 @@ function Projects() {
                 title="Decoder Ring"
                 description="Application that will either encode or decode a string using a variety of ciphers."
                 ghLink="https://github.com/a-havens/decoder-ring"
+              />
+            </Col>
+          </Row>
+          <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+            <Col md={4} className="project-card">
+              <ProjectCard
+                imgPath= {moviesImage}
+                isBlog={false}
+                title="WeLoveMovies"
+                description="Application that will show movies playing in theaters, and provides synopsis, runtime, and reviews."
+                ghLink="https://github.com/a-havens/WeLoveMovies_backend"
+                demoLink="https://welovemovies-frontend-mcnr.onrender.com/"
               />
             </Col>
           </Row>
