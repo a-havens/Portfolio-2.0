@@ -37,7 +37,7 @@ function AboutCard() {
               <GiCook /> Cooking for my friends and family.
             </li>
             <li className="about-activity">
-              <GiSittingDog /> <GiCat /> taking care of all my adorable pets!
+              <GiSittingDog /> <GiCat /> Taking care of all my adorable pets!
             </li>
           </ul>
 
