@@ -22,18 +22,6 @@ function Projects() {
           <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
             <Col md={4} className="project-card">
               <ProjectCard
-                imgPath= {moviesImage}
-                isBlog={false}
-                title="WeLoveMovies"
-                description="Application that will show movies playing in theaters, and provides synopsis, runtime, and reviews."
-                ghLink="https://github.com/a-havens/WeLoveMovies_backend"
-                demoLink="https://welovemovies-frontend-mcnr.onrender.com/"
-              />
-            </Col>
-          </Row>
-          <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-            <Col md={4} className="project-card">
-              <ProjectCard
                 imgPath= {recipeTrackerImage}
                 isBlog={false}
                 title="Recipe Tracker"
@@ -52,6 +40,18 @@ function Projects() {
                 description="Personal app that allows users to create flashcards to study and organize them by Decks."
                 ghLink="https://github.com/a-havens/flashcard-app"
                 demoLink="https://flashcard-app-qmto.onrender.com/"
+              />
+            </Col>
+          </Row>
+          <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+            <Col md={4} className="project-card">
+              <ProjectCard
+                imgPath= {moviesImage}
+                isBlog={false}
+                title="WeLoveMovies"
+                description="Application that will show movies playing in theaters, and provides synopsis, runtime, and reviews."
+                ghLink="https://github.com/a-havens/WeLoveMovies_backend"
+                demoLink="https://welovemovies-frontend-mcnr.onrender.com/"
               />
             </Col>
           </Row>
