@@ -59,8 +59,6 @@ function ResumeNew() {
             />
           </Document>
         </Row>
-
-        {/* ... Other content ... */}
       </Container>
     </div>
   );
