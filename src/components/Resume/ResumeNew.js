@@ -9,11 +9,10 @@ import pdf from "../../Assets/amanda-havens-resume.pdf";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function ResumeNew() {
-  const [width, setWidth] = useState(1200);
+  const [width, setWidth] = useState(window.innerWidth);
   const [numPages, setNumPages] = useState(null);
 
   useEffect(() => {
-    setWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
 
     return () => {
@@ -40,7 +39,6 @@ function ResumeNew() {
             target="_blank"
             style={{ maxWidth: "250px" }}
           >
-            <AiOutlineDownload />
             &nbsp;Download CV
           </Button>
         </Row>
@@ -50,8 +48,8 @@ function ResumeNew() {
         className="d-flex justify-content-center"
         onLoadSuccess={onDocumentLoadSuccess}
         >
-          <Page pageNumber={1} width={pageWidth} height={pageHeight} scale={scale} />
-        </Document>
+            <Page pageNumber={1} width={600} height={800} scale={1.5} />
+          </Document>
         </Row>
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
