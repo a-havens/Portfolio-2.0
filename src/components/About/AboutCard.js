@@ -19,8 +19,10 @@ function AboutCard() {
             <br />
             <br />
             Right now, I'm on the tail-end of my software engineering bootcamp through Thinkful. 
-            I've knocked out the fundamentals, worked in frontend and backend development, and currently, 
-            I'm diving headfirst into data algorithms. 
+            On the front-end, I wield a mastery of HTML, CSS, and JavaScript, crafting user interfaces that seamlessly blend aesthetics with functionality. 
+              My expertise extends to popular frameworks like React, allowing me to build dynamic and responsive web applications that provide a delightful user experience.
+              Delving into the back-end, I am well-versed in server-side languages such as Node.js and Python, enabling me to architect robust and scalable back-end systems. 
+              My proficiency extends to database management, with hands-on experience in SQL databases like elephantSQL, PostgreSQL, and more.
             I'm set to earn my certificate by February 2024!
             <br />
             <br />
