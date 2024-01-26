@@ -9,6 +9,7 @@ import {
 } from "react-icons/di";
 import {
   SiPostgresql,
+  SiNextdotjs,
 } from "react-icons/si";
 
 function Techstack() {
