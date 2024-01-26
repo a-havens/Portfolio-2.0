@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
-import Particle from "../Particle";
-import pdf from "../../Assets/amanda-havens-resume.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import Particle from "../Particle";
+import pdf from "../../Assets/amanda-havens-resume.pdf";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function ResumeNew() {
@@ -29,17 +29,6 @@ function ResumeNew() {
     setNumPages(numPages);
   };
 
-  const calculateScale = () => {
-    const aspectRatio = 0.75; // Assuming 4:3 aspect ratio for the PDF
-    const pageWidth = width > 786 ? 786 : width; // Limit width for smaller screens
-    const pageHeight = pageWidth * aspectRatio;
-    const scale = pageWidth / 800; // Adjust this scale factor as needed
-
-    return { width: pageWidth, height: pageHeight, scale };
-  };
-
-  const { width: pageWidth, height: pageHeight, scale } = calculateScale();
-
   return (
     <div>
       <Container fluid className="resume-section">
@@ -56,9 +45,13 @@ function ResumeNew() {
           </Button>
         </Row>
         <Row className="resume">
-          <Document file={pdf} className="d-flex justify-content-center">
-              <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
-          </Document>
+        <Document
+        file={pdf}
+        className="d-flex justify-content-center"
+        onLoadSuccess={onDocumentLoadSuccess}
+        >
+          <Page pageNumber={1} width={pageWidth} height={pageHeight} scale={scale} />
+        </Document>
         </Row>
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
