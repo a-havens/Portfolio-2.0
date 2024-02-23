@@ -6,6 +6,7 @@ import recipeTrackerImage from "../../Assets/Projects/recipetracker.png";
 import flashcardAppImage from "../../Assets/Projects/flashcard-app.png";
 import decoderImage from "../../Assets/Projects/decoderRing.png";
 import moviesImage from "../../Assets/Projects/welovemovies.png";
+import periodicTables from "../../Assets/Projects/periodicTables.png"
 
 function Projects() {
     return (
@@ -19,6 +20,18 @@ function Projects() {
             Here are a few projects I've worked on recently.
           </p>
 
+          <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+            <Col md={4} className="project-card">
+              <ProjectCard
+                imgPath= {periodicTables}
+                isBlog={false}
+                title="Periodic Tables"
+                description="Application that allows resturant employees to create/edit reservations, create tables, seat reservations at tables, and search reservations by phone number."
+                ghLink="https://github.com/a-havens/Thinkful_Capstone"
+                demoLink="https://periodic-tables-nw5e.onrender.com"
+              />
+            </Col>
+          </Row>
           <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
             <Col md={4} className="project-card">
               <ProjectCard
