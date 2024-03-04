@@ -3,12 +3,14 @@ import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
 import pdf from "../../Assets/amanda-havens-resume.pdf";
+import resumeImage1 from "../../Assets/resume1.png";
+import resumeImage2 from "../../Assets/resume2.png";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function ResumeNew() {
-  const [setWidth] = useState(1200);
+  const [width, setWidth] = useState(1200);
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -23,17 +25,17 @@ function ResumeNew() {
             variant="primary"
             href={pdf}
             target="_blank"
-            style={{ maxWidth: "250px" }}>
+            style={{ maxWidth: "250px" }}
+          >
             &nbsp;Download CV
           </Button>
         </Row>
-        
+
         <Row className="resume">
           <Document 
-            file={pdf} 
-            className="d-flex justify-content-center">
-              <Page 
-                pageNumber={2} />
+          file={[resumeImage1, resumeImage2]} 
+          className="d-flex justify-content-center">
+            <Page pageNumber={1} />
           </Document>
         </Row>
       </Container>
