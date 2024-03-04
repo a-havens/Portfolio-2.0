@@ -3,8 +3,7 @@ import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
 import pdf from "../../Assets/amanda-havens-resume.pdf";
-import resumeImage1 from "../../Assets/resume1.png";
-import resumeImage2 from "../../Assets/resume2.png";
+
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
@@ -33,7 +32,7 @@ function ResumeNew() {
 
         <Row className="resume">
           <Document 
-          file={[resumeImage1, resumeImage2]} 
+          file={pdf}
           className="d-flex justify-content-center">
             <Page pageNumber={1} />
           </Document>
