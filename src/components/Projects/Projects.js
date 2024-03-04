@@ -28,7 +28,7 @@ function Projects() {
                 title="Periodic Tables"
                 description="Application that allows resturant employees to create/edit reservations, create tables, seat reservations at tables, and search reservations by phone number."
                 ghLink="https://github.com/a-havens/Thinkful_Capstone"
-                demoLink="https://periodic-tables-nw5e.onrender.com"
+                demoLink="https://periodic-tables-nw5e.onrender.com/"
               />
             </Col>
           </Row>
