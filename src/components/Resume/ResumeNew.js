@@ -33,7 +33,7 @@ function ResumeNew() {
             file={pdf} 
             className="d-flex justify-content-center">
               <Page 
-                pageNumber={1} />
+                pageNumber={2} />
           </Document>
         </Row>
       </Container>
