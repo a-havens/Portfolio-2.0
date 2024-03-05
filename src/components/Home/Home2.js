@@ -28,7 +28,7 @@ function Home2() {
               But eventually, I felt like I hit a ceiling and that's when my interest in coding took off.
               <br />
               <br />
-              I was lucky enough to join a coding bootcamp, and that's when I finally discovered my true passion!
+              I was lucky enough to join a coding program, and that's when I finally discovered my true passion!
               <br />
               <br />
               Now, I'm proficient in fundamental languages like <i><b className="blue">Javascript, HTML, and CSS</b></i>. 

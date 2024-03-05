@@ -18,7 +18,7 @@ function AboutCard() {
             , hailing from <span className= "blue"> Independence, KY.</span>
             <br />
             <br />
-            <p>I completed my software engineering bootcamp through Thinkful February of 2024.
+            <p>I completed my software engineering program through Thinkful February of 2024.
             </p> 
             <p>On the front-end, I wield a strong understanding of HTML, CSS, and JavaScript, crafting user interfaces 
               that seamlessly blend aesthetics with functionality. My expertise extends to popular frameworks 
