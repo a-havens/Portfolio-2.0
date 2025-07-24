@@ -10,15 +10,10 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
-  const [numPages, setNumPages] = useState(null);
 
   useEffect(() => {
     setWidth(window.innerWidth);
   }, []);
-
-  const onDocumentLoadSuccess = ({ numPages }) => {
-    setNumPages(numPages);
-  };
 
   return (
     <div>
@@ -36,17 +31,9 @@ function ResumeNew() {
           </Button>
         </Row>
 
-        <Row className="resume d-flex flex-column align-items-center">
-          <Document file={pdf} onLoadSuccess={onDocumentLoadSuccess}>
-            {Array.from(new Array(numPages), (el, index) => (
-              <Page
-                key={`page_${index + 1}`}
-                pageNumber={index + 1}
-                scale={width > 786 ? 1.7 : 0.6}
-                renderTextLayer={false}
-                renderAnnotationLayer={false}
-              />
-            ))}
+        <Row className="resume">
+          <Document file={pdf} className="d-flex justify-content-center">
+            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
           </Document>
         </Row>
 
@@ -55,8 +42,8 @@ function ResumeNew() {
             variant="primary"
             href={pdf}
             target="_blank"
-            style={{ maxWidth: "250px" }}
-          >
+            style={{ maxWidth: "250px" }}>
+              
             <AiOutlineDownload />
             &nbsp;Download CV
           </Button>
