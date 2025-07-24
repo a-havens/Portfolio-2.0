@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
@@ -10,11 +10,21 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function ResumeNew() {
-  const [width, setWidth] = useState(1200);
-  const [numPages, setNumPages] = useState(null);
+  const [numPages, setNumPages] = useState(0);
+  const [scale, setScale] = useState(1);
+  const containerRef = useRef(null);
 
   useEffect(() => {
-    setWidth(window.innerWidth);
+    function handleResize() {
+      if (containerRef.current) {
+        const containerWidth = containerRef.current.offsetWidth;
+        // Adjust scale based on container width
+        setScale(containerWidth > 786 ? containerWidth / 900 : containerWidth / 600);
+      }
+    }
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   function onDocumentLoadSuccess({ numPages }) {
@@ -23,7 +33,7 @@ function ResumeNew() {
 
   return (
     <div>
-      <Container fluid className="resume-section">
+      <Container fluid className="resume-section" ref={containerRef}>
         <Particle />
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
@@ -47,7 +57,7 @@ function ResumeNew() {
               <Page
                 key={`page_${index + 1}`}
                 pageNumber={index + 1}
-                scale={width > 786 ? 1.7 : 0.6}
+                scale={scale}
               />
             ))}
           </Document>
