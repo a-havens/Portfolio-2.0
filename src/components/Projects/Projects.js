@@ -64,7 +64,6 @@ function Projects() {
                 title="WeLoveMovies"
                 description="Application that will show movies playing in theaters, and provides synopsis, runtime, and reviews."
                 ghLink="https://github.com/a-havens/WeLoveMovies_backend"
-                demoLink="https://welovemovies-frontend-mcnr.onrender.com/"
               />
             </Col>
           </Row>
