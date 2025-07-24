@@ -1,39 +1,23 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
 import pdf from "../../Assets/amanda-havens-resume.pdf";
-import { Document, Page, pdfjs } from "react-pdf";
 import { AiOutlineDownload } from "react-icons/ai";
+import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function ResumeNew() {
-  const [numPages, setNumPages] = useState(0);
-  const [scale, setScale] = useState(1);
-  const containerRef = useRef(null);
+  const [width, setWidth] = useState(1200);
 
   useEffect(() => {
-    function handleResize() {
-      if (containerRef.current) {
-        const containerWidth = containerRef.current.offsetWidth;
-        // Adjust scale based on container width
-        setScale(containerWidth > 786 ? containerWidth / 900 : containerWidth / 600);
-      }
-    }
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    setWidth(window.innerWidth);
   }, []);
-
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-  }
 
   return (
     <div>
-      <Container fluid className="resume-section" ref={containerRef}>
+      <Container fluid className="resume-section">
         <Particle />
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
@@ -48,18 +32,8 @@ function ResumeNew() {
         </Row>
 
         <Row className="resume">
-          <Document
-            file={pdf}
-            className="d-flex flex-column align-items-center"
-            onLoadSuccess={onDocumentLoadSuccess}
-          >
-            {Array.from(new Array(numPages), (el, index) => (
-              <Page
-                key={`page_${index + 1}`}
-                pageNumber={index + 1}
-                scale={scale}
-              />
-            ))}
+          <Document file={pdf} className="d-flex justify-content-center">
+            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
           </Document>
         </Row>
 
@@ -77,6 +51,8 @@ function ResumeNew() {
       </Container>
     </div>
   );
+}
+
 }
 
 export default ResumeNew;
